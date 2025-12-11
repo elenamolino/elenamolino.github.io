@@ -1,17 +1,15 @@
 ---
-title:          "Lorem ipsum: Dolor sit amet, consectetur adipiscing elit"
-date:           2023-01-05 00:01:00 +0800
+title:          "Towards a Systematic Comparison Framework for Cloud Services Customer Agreements"
+date:           2024-03-16
 selected:       true
-pub:            "Nature Communications"
+pub:            "Service-Oriented Computing – ICSOC Workshops"
 pub_date:       "2023"
 abstract: >-
-  Cover image is a photo by Thomas Renaud on Unsplash. The abstract of the publication is meant to be a TLDR (very brief summary with 1~2 sentences) of your paper.
-cover:          /assets/images/covers/cover1.jpg
+  The paper presents a framework that automates the analysis and comparison of service contracts using language models to detect obligations, rights, and involved parties. A prototype and evaluation show that the system effectively supports understanding and reasoning about agreement terms.
+cover:          /assets/images/covers/motivation.png
 authors:
-- Your Name*
-- Robert White*
-- John Doe
-- Charles Green (Stanford)
+- Elena Molino-Peña
+- José María García
 links:
-  Paper: https://www.cell.com
+  Paper: https://link.springer.com/book/10.1007/978-981-97-0989-2
 ---

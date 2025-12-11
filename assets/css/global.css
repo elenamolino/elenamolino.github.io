@@ -46,6 +46,12 @@ h1, h2, h3, h4, h5, h6,
     opacity: 0.95;
 }
 
+/* Color personalizado para la barra de navegación
+   (sobrescribe el bg-dark de Bootstrap sin copiar otros estilos) */
+.navbar.navbar-dark.bg-dark {
+    background-color: #283593 !important;
+}
+
 .inline-badge {
     height: 16px;
     vertical-align: -10%;
@@ -89,4 +95,3 @@ div.lazy {
 .email-text {
     font-family: Source Code Pro, monospace;
 }
-

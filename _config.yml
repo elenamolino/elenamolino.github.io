@@ -13,7 +13,15 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-baseurl: "/academic-homepage" # the subpath of your site, e.g. /blog
+title: "Elena Molino"
+description: "PhD student at the University of Seville."
+url: "https://elenamolino.github.io" # Full base URL of the site (no trailing slash)
+baseurl: "" # the subpath of your site, e.g. /blog; keep empty for <username>.github.io
+
+author: "Elena Molino"
+# Optional social handles for SEO (fill in or leave blank)
+twitter_username: ""  # without @
+github_username: "elenamolino"
 
 # Build settings
 markdown: kramdown

@@ -4,7 +4,32 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>{{ page.title }} - {{ site.data.profile.navbar_name }}</title>
+
+    {%- comment -%}
+    Basic SEO: dynamic title and meta description
+    - Uses page.seo_title / page.seo_description when provided in front matter
+    - Falls back to page.title and site.description
+    {%- endcomment -%}
+    {%- assign meta_title = page.seo_title | default: page.title | append: " - " | append: site.data.profile.navbar_name -%}
+    {%- assign meta_description = page.seo_description | default: site.description -%}
+
+    <title>{{ meta_title }}</title>
+    <meta name="description" content="{{ meta_description }}">
+
+    {%- if site.url -%}
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    {%- endif -%}
+    <meta property="og:title" content="{{ meta_title }}">
+    <meta property="og:description" content="{{ meta_description }}">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{ site.data.profile.navbar_name }}">
+
+    <meta name="twitter:card" content="summary">
+    {%- if site.twitter_username -%}
+    <meta name="twitter:creator" content="@{{ site.twitter_username }}">
+    <meta name="twitter:site" content="@{{ site.twitter_username }}">
+    {%- endif -%}
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" />
